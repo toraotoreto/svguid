@@ -5,12 +5,23 @@ const keygen = {
 	params: [],
 	step16: 0,
 	step256: 0,
+	step4095: 0,
 
 	next16() {
 		let rnd = parseInt(keygen.hash[keygen.step16], 16) 
 		keygen.step16++
 		if(keygen.step16 >= keygen.hash.length) {
 			keygen.step16 = 0
+		}
+		return rnd
+	},
+
+	next4095() {
+		let hex = keygen.hash[keygen.step4095] + keygen.hash[keygen.step4095+1] + keygen.hash[keygen.step4095+2]
+		let rnd = parseInt(hex, 16) 
+		keygen.step4095 = keygen.step4095 + 3
+		if(keygen.step4095 >= keygen.hash.length) {
+			keygen.step4095 = 0
 		}
 		return rnd
 	},
@@ -34,6 +45,7 @@ const keygen = {
 		}
 		keygen.step16 = 0
 		keygen.step256 = 0
+		keygen.step4095 = 0
 		keygen.id = id
 		keygen.hash = key
 		keygen.params = params
