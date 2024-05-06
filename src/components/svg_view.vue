@@ -12,15 +12,17 @@
 </template>
 
 <script>
-import { SVG } from '@svgdotjs/svg.js'
+import { SVG, Container, extend } from '@svgdotjs/svg.js'
 import widget from "../widget/widget.js"
 import keygen from "../keygen.js"
+import svgjsblob from "../blob.js";
 
 export default {
     data() {
         return {
             innercode: '',
-            key: null
+            key: null,
+            SVG: null
         }
     },
     mounted() {
@@ -33,6 +35,7 @@ export default {
         refresh(key) {
             //console.log(key);
             this.key = key
+            extend(Container, svgjsblob)
             let draw = SVG().viewbox(0, 0, 1000, 1000)
             //draw.rect().attr({ x: 0, y: 0, width: 1000, height: 1000, stroke: 'blue', "fill-opacity": 0 })
             widget(key,draw)

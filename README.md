@@ -1,8 +1,7 @@
-<img src="./public/logo.png"/>
-
-
-Versão alpha betha gama ....
-
+<img src="./public/logo.png" style="margin-bottom: 10px;"/>
+ 
+> Versão alpha beta gama ....
+>
 
 ## Como rodar?
 

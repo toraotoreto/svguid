@@ -7,6 +7,10 @@ const keygen = {
 	step256: 0,
 	step4095: 0,
 
+	next() {
+		return 1 + keygen.next4095() % 1000
+	},
+
 	next16() {
 		let rnd = parseInt(keygen.hash[keygen.step16], 16) 
 		keygen.step16++
