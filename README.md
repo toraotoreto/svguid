@@ -125,7 +125,7 @@ import shape from "../utils/shape/shape.js"
 ~~~
 
 ~~~javascript 
-// trecho que cria e desenha uma blob
+// trecho que cria e desenha um shape
 let s = shape(key.next())
 s.fill("green").move(50,50).size(700)
 s.addTo(draw)
