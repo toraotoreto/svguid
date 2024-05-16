@@ -116,4 +116,18 @@ b.fill("green").move(50,50).size(700)
 b.addTo(draw)
 ~~~
 
+### Sobre a criação de `shape`
+
+O arquivo `src/widget/utils/shape/shape.js` disponibiliza uma função `shape(number)` que recebe um valor inteiro como chave e devolve um objeto que desenha um shape. ver [exemplo07](./src/widget/examples/widget07.js)
+
+~~~javascript 
+import shape from "../utils/shape/shape.js"
+~~~
+
+~~~javascript 
+// trecho que cria e desenha uma blob
+let s = shape(key.next())
+s.fill("green").move(50,50).size(700)
+s.addTo(draw)
+~~~
 
