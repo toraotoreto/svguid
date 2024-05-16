@@ -101,3 +101,19 @@ let nextColor = getColorIterator(key)
 nextColor()
 ~~~
 
+### Sobre a criação de `blob`
+
+O arquivo `src/widget/utils/blob/blob.js` disponibiliza uma função `blob(number)` que recebe um valor inteiro como chave e devolve um objeto que desenha um blob. ver [exemplo05](./src/widget/examples/widget05.js)
+
+~~~javascript 
+import blob from "../utils/blob/blob.js"
+~~~
+
+~~~javascript 
+// trecho que cria e desenha uma blob
+let b = blob(key.next())
+b.fill("green").move(50,50).size(700)
+b.addTo(draw)
+~~~
+
+
