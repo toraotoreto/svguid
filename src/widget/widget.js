@@ -28,7 +28,7 @@ function widget(key, draw) {
     // Boca
     draw.rect(97.5, 18)
         .move(445, 330)
-        .fill('#333')
+        .fill('#000')
         .radius(7.5);
 
     // Braço esquerdo (3 bolas em sequência)
