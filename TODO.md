@@ -1,0 +1,6 @@
+- [x] Add 3 mixed background types (checkerboard pattern, concentric shapes, wavy background) that change with key.next()
+- [x] Ensure robot colors never match background colors by tracking used colors
+- [x] Test the background changes by running the app and entering different identifiers
+- [x] Add varying arm positions (3-4 different poses) based on key.next()
+- [x] Add varying leg positions (3-4 different stances) based on key.next()
+- [x] Test the arm/leg position changes by running the app and entering different identifiers
