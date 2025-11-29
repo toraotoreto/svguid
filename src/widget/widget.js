@@ -94,8 +94,8 @@ function widget(key, draw) {
     let rightEyeType = key.next() % 5; // Tipo do olho direito
     let mouthType = key.next() % 5;    // Tipo da boca
 
-    // Selecionar tipos para braços e pernas (0-2 para cada)
-    let armType = key.next() % 3; // Tipo dos braços
+    // Selecionar tipos para braços e pernas (0-3 para braços, 0-2 para pernas)
+    let armType = key.next() % 4; // Tipo dos braços
     let legType = key.next() % 3; // Tipo das pernas
 
     // Selecionar tipo de cabeça (menos frequente, usando soma de 3 valores para reduzir probabilidade)
@@ -171,13 +171,13 @@ function widget(key, draw) {
         // Braços estendidos horizontalmente para os lados
         // Braço esquerdo: 3 círculos alinhados horizontalmente para esquerda
         draw.circle(67.5).move(280, 440).fill(robotColor()); // Parte próxima ao corpo
-        draw.circle(52.5).move(220, 440).fill(robotColor()); // Parte média
-        draw.circle(37.5).move(160, 440).fill(robotColor()); // Parte distante
+        draw.circle(52.5).move(160, 440).fill(robotColor()); // Parte média
+        draw.circle(37.5).move(40, 440).fill(robotColor()); // Parte distante
 
         // Braço direito: 3 círculos alinhados horizontalmente para direita
         draw.circle(67.5).move(630, 440).fill(robotColor()); // Parte próxima ao corpo
-        draw.circle(52.5).move(690, 440).fill(robotColor()); // Parte média
-        draw.circle(37.5).move(750, 440).fill(robotColor()); // Parte distante
+        draw.circle(52.5).move(750, 440).fill(robotColor()); // Parte média
+        draw.circle(37.5).move(840, 440).fill(robotColor()); // Parte distante
     } else if (armType === 2) {
         // Braços levantados em ângulo (diagonal para cima)
         // Braço esquerdo: 3 círculos em diagonal para cima-esquerda
